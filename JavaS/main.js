@@ -1,0 +1,25 @@
+//validação dos campos
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      var forms = document.getElementsByClassName('needs-validation');
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+//mascara cpf
+//   $(document).ready(function() {
+//     $('#cpf').inputmask('999.999.999-99', { clearIncomplete: true,removeMaskOnSubmit: true });
+// });
+$(document).ready(function(){
+    $('.cpf').mask('000.000.000-00', {reverse: true});
+  });
+  
+  
