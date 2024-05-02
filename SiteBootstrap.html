@@ -1,95 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js">
-    <link rel="stylesheet" href="https://travis-ci.org/igorescobar/jQuery-Mask-Plugin.png">
-    <title>Hello, modularity!</title>
-  </head>
-  <body>
+
+    <title>Cadastre!</title>
     
-    <div class="container-fluid mt-3">
-        <h2>Página de Cadastro</h2>
-        <div class="row">
-          <div class="col-3 "></div>
-          <div class="col-6 bg-light rounded">
+</head>
+<body>
+    
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-3 "></div>
+        <div class="col-6 bg-light rounded row h-100" >
             <div class="container">
                 <form class="needs-validation" novalidate>
-                    <div class="form-row">
-                      <div class="col-md-4 mb-3">
-                        <label for="validationCustom01">Nome completo</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Nome Completo" required>
-                        <div class="valid-feedback">
-                          Tudo certo!
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3">
-                        <div class="form-group">
-                            <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="validationTooltip02" placeholder="CPF" required>
-                            <div class="valid-feedback">
-                                Tudo certo!
+                    <div class="form-row ">
+                      <h2 class="mb-4 text-center w-100">Página de Cadastro</h2>
+                        <div class="input-group mb-3" style="">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="nomeCompleto" placeholder="Username" required>
+                                <label for="nomeCompleto">Nome Completo</label>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
                             </div>
-                          </div>
+                        </div>
+                      
+                        <div class="input-group mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="cpf" name= "cpf" maxlength="14" placeholder=" " required >
+                                <label for="cpf">CPF</label>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                            </div>
                         </div>
                         
-                      <div class="col-md-4 mb-3">
-                        <label for="validationCustomUsername">Usuário</label>
-                          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Usuário" aria-describedby="inputGroupPrepend" required>
-                          <div class="invalid-feedback">
-                            Por favor, escolha um nome de usuário.
-                          </div>
-                      </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback">
+                                Por favor, informe um email válido.
+                            </div>  
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                            <label for="dataNascimento">Data de Nascimento</label>
+                            <input type="text" class="form-control" id="dataNascimento" placeholder="__/__/____" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe uma data válida.
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="form-row">
-                      <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">Cidade</label>
-                        <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
-                        <div class="invalid-feedback">
-                          Por favor, informe uma cidade válida.
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <select class="form-control" id="estado">
+                                <option value="">Selecione um estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
                         </div>
-                      </div>
-                      <div class="col-md-3 mb-3">
-                        <label for="validationCustom04">Estado</label>
-                        <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
-                        <div class="invalid-feedback">
-                          Por favor, informe um estado válido.
+                        
+                        <div class="input-group mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="cidade" placeholder=" " required>
+                                <label for="cidade">Cidade</label>
+                                <div class="invalid-feedback">
+                                    Por favor, informe uma cidade válida.
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-md-3 mb-3">
-                        <label for="validationCustom05">CEP</label>
-                        <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
-                        <div class="invalid-feedback">
-                          Por favor, informe um CEP válido.
+                        
+                        <div class="input-group mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="endereco" placeholder=" " required>
+                                <label for="endereco">Endereço</label>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                            </div>
                         </div>
-                      </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label for="cep">CEP</label>
+                            <input type="text" class="form-control" id="cep" placeholder="_____/___" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe um CEP válido.
+                            </div>
+                        </div>
                     </div>
+                    <div class="mb-3">
+                        <label for="fotoDocumento" class="form-label">Foto do documento:</label>
+                        <input class="form-control" type="file" id="fotoDocumento">
+                    </div>
+
                     <div class="form-group">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                          Concordo com os termos e condições
-                        </label>
-                        <div class="invalid-feedback">
-                          Você deve concordar, antes de continuar.
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="termos" required>
+                            <label class="form-check-label" for="termos">
+                                Concordo com o <a href="https://www.gov.br/pt-br/termos-de-uso">Termo de Uso e Aviso de Privacidade.</a>
+                            </label>
+                            <div class="invalid-feedback">
+                                Você deve concordar, antes de continuar.
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    <button class="btn btn-primary" type="submit">Enviar</button>
-                  </form>
+                    <button class="btn btn-primary" type="submit">Gravar</button>
+                    <button class="btn btn-secondary" type="button" onclick="limparCampos()">Limpar</button>
+                </form>
                 
             </div>
-          </div>
-          <div class="col-3 "></div>
         </div>
-      </div>
+        <div class="col-3 "></div>
+    </div>
+</div>
 
-    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
-    <script src="./JavaS/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-
-  </body>
+<script>
+    function limparCampos() {
+        document.getElementById("nomeCompleto").value = "";
+        document.getElementById("cpf").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("dataNascimento").value = "";
+        document.getElementById("estado").selectedIndex = 0;
+        document.getElementById("cidade").value = "";
+        document.getElementById("endereco").value = "";
+        document.getElementById("cep").value = "";
+        document.getElementById("fotoDocumento").value = "";
+        document.getElementById("termos").checked = false;
+    }
+</script>
+<script src="./JavaS/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#cpf').mask('000.000.000-00');
+        $('#cep').mask('00000-000');
+        $('#dataNascimento').mask('00/00/0000');
+    });
+</script>
+</body>
 </html>
